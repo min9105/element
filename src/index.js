@@ -64,6 +64,7 @@ import CollapseItem from '../packages/collapse-item/index.js';
 import Cascader from '../packages/cascader/index.js';
 import ColorPicker from '../packages/color-picker/index.js';
 import Transfer from '../packages/transfer/index.js';
+import Bottomnotification from '../packages/BottomNotification/index.js';
 import locale from 'element-ui/src/locale';
 import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
 
@@ -128,6 +129,7 @@ const components = [
   Cascader,
   ColorPicker,
   Transfer,
+  Bottomnotification,
   CollapseTransition
 ];
 
@@ -148,7 +150,7 @@ const install = function(Vue, opts = {}) {
   Vue.prototype.$alert = MessageBox.alert;
   Vue.prototype.$confirm = MessageBox.confirm;
   Vue.prototype.$prompt = MessageBox.prompt;
-  Vue.prototype.$notify = Notification;
+  Vue.prototype.$notify = Bottomnotification;
   Vue.prototype.$message = Message;
 };
 
@@ -226,5 +228,6 @@ module.exports = {
   CollapseItem,
   Cascader,
   ColorPicker,
-  Transfer
+  Transfer,
+  Bottomnotification
 };
